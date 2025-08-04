@@ -1,3 +1,21 @@
+:root {
+    --primary-aqua: #5cb8ae;
+    --prinary-grey: #333f48;
+    --primary-red: #e0004d;
+    --black: #000;
+    --white: #fff;
+} 
+
+
 header {
     padding: 30px 0;
+    background-color: var(--primary-aqua);
+
+    .nav-link {
+        color: var(--white);
+    }
+
+    .nav-link:hover {
+        color: var(--primary-red);
+    }
 }
