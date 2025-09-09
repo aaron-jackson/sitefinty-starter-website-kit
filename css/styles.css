@@ -1,6 +1,6 @@
 :root {
     --primary-aqua: #5cb8ae;
-    --prinary-grey: #333f48;
+    --primary-grey: #333f48;
     --primary-red: #e0004d;
     --black: #000;
     --white: #fff;
@@ -17,18 +17,33 @@ header {
 
     .nav-link:hover {
         color: var(--primary-red);
-        text-decoration: underline;
     }
 }
 
 .tabs { 
     margin: 20px; 
     padding: 150px 0;
-    background-color: rgba(0, 0, 0, .5);
     opacity: .8;
 }
 
-/* slider */ 
+
+/* Tabs */ 
+
+.tabs .nav-tabs .nav-link {
+    color: var(--primary-aqua);
+}
+
+.tabs .nav-tabs .nav-link.active {
+    color: var(--primary-red);
+}
+
+.tab-content .col-3 img:hover {
+    transition: transform .2s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Slider */ 
 .carousel-wrapper, sl-carousel {
     width: 100vw;
     margin: 0;
@@ -39,4 +54,23 @@ sl-carousel::part(base) {
     width: 100vw;
     margin: 0;
     padding: 0;
+}
+
+
+/* Footer */ 
+footer {
+    background-color: var(--primary-grey);    
+    color: var(--white);
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer .footer-nav li a {
+    color: var(--white);
+}
+
+footer .footer-nav li a:hover {
+    color: var(--primary-red);
 }
