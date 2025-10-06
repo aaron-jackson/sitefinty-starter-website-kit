@@ -1,12 +1,107 @@
+/* 2024 CSS coding standards documentation */
+/* by Hannah Arnett */
+
+
+
+/* References:
+-- 1. https://docs.ckan.org/en/2.9/contributing/css.html
+-- 2. https://blog.hubspot.com/website/css-rem
+-- 3. https://kinsta.com/blog/css-best-practices/
+-- 4. https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/
+
+
+
+/* Rules to best follow
+-- 1. Use variables whenever possible (used more than 2x throughout the website)
+-- 2. Always style with responsiveness in mind (think rem, percentages, flex styling... rather than absolute pixel values, etc.)
+      --> Use rem for font sizes and any other dynamically sized element critical for accessibility
+-- 3. Similarly, always style with accessibility in mind (colors, sizes, spacing, etc.)
+-- 4. Use hex codes for colors unless using rgba() for opacity
+-- 5. Always provide fallback properties for older browsers
+-- 6. Always use a fallback font
+-- 7. Avoid redundant styling. Use the "DRY" (Don't Repeat Yourself) method!
+-- 8. Use separate stylesheet for responsive styling
+      --> Responsive styling guide is below the footer on this document!
+-- 9. Copy and paste this guide when creating a new stylesheet
+*/
+
+/* --- Body Styles --- */
 :root {
+    /* black and white always included in the root variable colors */
+    /* any brand colors used more than once included in the root variable colors */
     --primary-aqua: #5cb8ae;
     --primary-grey: #333f48;
     --primary-red: #e0004d;
     --black: #000;
     --white: #fff;
+    --brand-color-example: #fff;
+    /* main brand font styles with example values */
+    --bs-body-color: #000;
+    --bs-body-font-family: Arial, sans-serif;
+    --bs-body-line-height: 3rem; /* 30px */
+    /* see article: https://blog.hubspot.com/website/css-rem */
+    --bs-body-font-size: 1.6rem; /* 16px */
+    --bs-body-font-weight: 400;
 } 
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-smooth: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+html {
+	font-size: 62.5%; /* changes a default 16px font size to 10px */
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--white);
+    color: var(--bs-body-color);
+    font-family: var(--bs-body-font-family);
+    line-height: var(--bs-body-line-height);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    min-width: 100%;
+}
+/* miscellaneous body styles listed last */
+/* examples including a, breadcrumb, table, img, button, etc. */
+a {
+    color: var(--brand-color-example);
+}
+.breadcrumb, .breadcrumb a {
+    font-size: 1.2rem;
+}
+table td, table th {
+    padding: 10px;
+}
+img {
+    filter: grayscale();
+}
+.button {
+    border: 1px solid var(--brand-color-example);
+}
+/* --- Heading Styles --- */
+h1 {
 
+}
+h2 {
 
+}
+h3 {
+
+}
+h4 {
+
+}
+h5 {
+
+}
+h6 {
+
+}
 header {
     padding: 30px 0;
     background-color: var(--primary-aqua);
@@ -27,7 +122,7 @@ header {
 }
 
 
-/* Tabs */ 
+/* --- Tabs --- */ 
 
 .tabs .nav-tabs .nav-link {
     color: var(--primary-aqua);
@@ -43,7 +138,7 @@ header {
     cursor: pointer;
 }
 
-/* Slider */ 
+/* --- Slider --- */ 
 .carousel-wrapper, sl-carousel {
     width: 100vw;
     margin: 0;
@@ -57,7 +152,7 @@ sl-carousel::part(base) {
 }
 
 
-/* Footer */ 
+/* --- Footer  --- */ 
 footer {
     background-color: var(--primary-grey);    
     color: var(--white);
@@ -73,4 +168,106 @@ footer .footer-nav li a {
 
 footer .footer-nav li a:hover {
     color: var(--primary-red);
+}
+
+/* items ordered top to bottom, left to right */
+/* --- Super Header (if neccessary) --- */
+
+
+
+/* --- Header --- */
+
+
+
+/* --- Header -> Logo --- */
+
+
+
+/* --- Header -> Main Nav Menu --- */
+
+
+
+/* --- Homepage Main Content --- */
+
+
+
+
+/* --- Homepage > Hero --- */
+
+
+
+/* --- Homepage > Section --- */
+
+
+
+/* --- Content Page --- */
+
+
+
+/* --- Content Page > Hero --- */
+
+
+
+/* --- Content Page > Section --- */
+
+
+
+/* --- Content Page > Subpage > Section --- */
+
+
+
+/* --- Contact --- */
+
+
+
+/* --- Contact > Contact Form Submission --- */
+
+
+
+/* --- Legal --- */
+
+
+
+/* --- Prefooter --- */
+
+
+
+/* --- Footer --- */
+
+
+
+/* ************** RESPONSIVE GUIDE ************** */
+/* size up as needed */
+/* Max Width 1399px
+------------------------------------*/
+@media all and (max-width: 1399px) {
+
+}
+
+
+/* Max Width 1199px
+------------------------------------*/
+@media all and (max-width: 1199px) {
+    
+}
+
+
+/* Max Width 991px
+------------------------------------*/
+@media all and (max-width: 991px) {
+
+}
+
+
+/* Max Width 767px
+------------------------------------*/
+@media all and (max-width: 767px) {
+
+}
+
+
+/* Max Width 575px
+------------------------------------*/
+@media all and (max-width: 575px) {
+
 }
